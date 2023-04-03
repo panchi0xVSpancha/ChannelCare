@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: url(../img/contact.jpg);
+    background-size: cover;
+    background-position:bottom left;
+    background-repeat: no-repeat;
+}
+.content{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 600px;
+    height: 300px;
+    /* background-color: tomato; */
+
+}
+.item-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    widows: 100%;
+    /* background-color: turquoise; */
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.071);
+}
+.titile-contact{
+    margin-bottom: 30px;
+}
+.item-contact >div{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    transition: 0.9s all ;
+    justify-content: space-around;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    cursor: pointer;
+}
+.item-contact >div:hover{
+    background-color: rgba(0, 0, 0, 0.66);
+}
+.item-contact >div > i{
+    position: absolute;
+    transition: 1s ease-in ;
+}
+.item-contact >div >h3{
+    color: white;
+    font-weight: lighter;
+    display: none;
+}
+
+
+.contact{
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: #101a5e;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px 20px;
+    color: rgb(242, 225, 225);
+    /* text-align: center; */
+    border-radius: 5px;
+    box-shadow: 0 0 0 1000px rgba(0,0,0,.5);
+    /* pointer-events: auto!important; */
+}
+
+.call{
+    text-align: center;
+}
+.contact h2{
+    margin-top: 30px;
+    text-align: center;
+}
+.call h4{
+    font-weight: lighter;
+}
+.contact i{
+    float: right;
+    cursor: pointer;
+}
+.contact i:hover{
+    color: rgb(13, 0, 255);
+}
+.call h1{
+    margin-top: 50px;
+}
+.email form{
+    display: flex;
+    flex-direction: column;
+}
+
+.email form div >input{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.mail-details{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+.mail-details input{
+    width: 45%;
+}
+.email form div input{
+    margin-bottom: 15px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+.infor textarea{
+    border: 5;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    height: 100px;
+}
+.submit{
+    display: flex;
+    justify-content: space-around;
+}
+.submit input{
+   
+    width: 30%;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: rgb(255, 130, 174);
+    color: white;
+}
+
+.chat{
+    width: 100%;
+    height: 73%;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.chat h5{
+    background-color: rgba(11, 81, 232, 0.708);
+    color: rgb(238, 240, 242);
+    padding: 5px;
+    width: 250px;
+    font-weight: lighter;
+    border-radius: 25px;
+}
+
+.form{
+    width: 100%;
+    
+    display: flex;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px ;
+}
+.form form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 2px;
+    margin-bottom: 5px;
+}
+.message h2{
+    margin-top: 5px;
+}
+.form input[type="text"]{
+    border-radius: 25px;
+    padding: 5px;
+    width: 85%;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+}
+.form input[placeholder]{
+    color:white;
+}
+.form ::placeholder{
+    color: white;
+}
+.form button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+
+}
+.form button i{
+    float: none;
+    color: rgb(255, 255, 255);
+}

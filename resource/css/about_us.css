@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+li{
+    list-style: none;
+}
+
+body{
+    
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.back-image img{
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    /* width: 100vw; */
+    height: 100vh;
+    right: 0;
+}
+.header{
+    background-color: transparent;
+}
+.containe{
+    display: flex;
+    overflow-x: hidden; 
+}
+.pic{
+    width: 40%;
+    min-height: 600px;
+    padding: 10px ;
+}
+
+.details ,.name h1{
+    font-family: 'Patrick Hand', cursive;
+}
+
+.details{
+    
+    /* background-color: rgb(247, 252, 252); */
+    padding: 30px;
+    width: 55%;
+    text-align: center;
+    background-color: rgba(180, 198, 242, 0.612);
+    min-height: 600px;
+    font-weight: bold;
+    
+}
+.details p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+.picture{
+    /* height: 400px; */
+    text-align: center;
+    padding-top: 30px;
+ }
+
+.picture::before{
+    content: "";
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    z-index:-1;
+    border-radius: 50%;
+    /* border:5px solid rgb(63, 102, 255); */
+    /* box-shadow: 1px 1px 60px 20px rgb(44, 86, 255,0.8);  */
+}
+
+
+.picture img{
+    margin: 25px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.name{
+    min-height:300px ;
+    text-align: center;
+    margin-top: 30px;
+   
+    /* padding: 40px; */
+}
+.name h1{
+    letter-spacing: 3px;
+    font-size: 48px;
+    color: rgb(21, 19, 19);
+}
+
+.nav-contact{
+
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgba(180, 198, 242, 0.859);
+    /* background-color: rgba(26, 26, 255, 0.8); */
+    min-height: 600px;
+    width: 25%;
+    opacity: 1;
+}
+
+.nav-contact-item li{
+    height: 30px;
+    padding: 30px 0px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+.nav-contact-item li a{
+    color: rgb(87, 87, 87);
+    font-weight: bold;
+    padding: 30px 20px;
+}
+.nav-contact-item li a:hover{
+    color: rgb(167, 166, 166);
+}
+
+.nav-contact-item li:hover{
+    background-color:rgba(0, 0, 0, 0.7) ;
+    /* font-size:large; */
+    color: rgb(255, 253, 253);
+    padding: 30px 0px;
+}
+.profile-pic img{
+    margin: 15px;
+    width: 100px;
+    /* border-radius: 50%; */
+}
