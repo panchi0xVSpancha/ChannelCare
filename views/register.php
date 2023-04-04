@@ -13,14 +13,14 @@
 
 <body>
 	<div class="background-img1"><img src="../resource/img/new/register.png" alt=""></div>
-	<div class="logo"><img src="../resource/img/logo1.png" alt=""></div>
 	<div class="container">
 		<div class="para">
 			<h1><b>U</b>ser <b>R</b>egistration</h1>
 			<h2 style="text-align: center">Hurry Up and register!</h2>
-			<p style="text-align: center">Are you <span>finding a boarding place? </span>this is the ideal platform for
+			<p style="text-align: center">Join our growing community of <span>patients</span> and <span>doctors</span> </br>  by signing up for an account today!</br>Enjoy hassle-free booking and access to top-notch medical care with just a few clicks.</p>
+			<!-- <p style="text-align: center">Are you <span>finding a boarding place? </span>this is the ideal platform for
 				you. find the closest place you want.<br />Do you want to <span>advertise your boarding or food delivary
-					service?</span> this is the ideal platform for you. Your customers are waiting for you! </p>
+					service?</span> this is the ideal platform for you. Your customers are waiting for you! </p> -->
 		</div>
 		<div class="register">
 

@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-image: url(../img/login3.jpg);
+    /* background-image: url(../img/login3avif.avif); */
     background-size: cover;
     overflow-y: hidden;
 }
@@ -75,6 +75,7 @@ a{
 .welcome h1{
     font-size: 39px;
     font-weight: bolder;
+    color: #101e5a;
 }
 
 .login {
