@@ -9,15 +9,12 @@
 </head>
 
 <body>
-	<div class="background-img1"><img src="../resource/img/boarder.png" alt=""></div>
-	<div class="logo"><img src="../resource/img/logo1.png" alt=""></div>
+	<div class="background-img1"><img src="../resource/img/proffesionals.jpg" alt="" ></div>
 	<div class="container">
 		<div class="para">
 			<h1><b>U</b>ser <b>R</b>egistration</h1>
-			<h2 style="text-align: center">Student</h2>
-			<p style="text-align: center"> <span>Hey there!</span> Welcome to Bodima Platform. Explore our facilities.
-				<span>Click Register</span> to find best places just in seconds. Now Sri Lanka's <span>best
-					boardings</span> are at your fingertips!</p>
+			<h2 style="text-align: center">Patient</h2>
+			<p style="text-align: center">Revolutionize the way you access healthcare</br> by <span>registering</span> with <span>e-channeling!</span> </br>Say goodbye to long waits and hello to seamless booking and</br> personalized care with <span>just a few clicks</span>.</br> <span>Sign up now</span> to find best <span>proffesionals</span> !</p>
 		</div>
 		<div class="register">
 			<form method="post" id="patientReg">
