@@ -4,7 +4,8 @@ class reg_user{
     // patient registration fiver
     public static function patientReg($email,$first_name,$last_name,$address,$phone_number,$password,$connection)
     {
-        $query="INSERT INTO patient (email,first_name,last_name,address,phone_number,password,type) VALUES('{$email}','{$first_name}','{$last_name}','{$address}','{$phone_number}','{$password}','patient')";
+       // $query="INSERT INTO admin (email,first_name,last_name,address,phone_number,password,type) VALUES('{$email}','{$first_name}','{$last_name}','{$address}','{$phone_number}','{$password}','admin')";
+        $query="INSERT INTO patient (email,first_name,last_name,address,phone_number,password,type,user_accepted) VALUES('{$email}','{$first_name}','{$last_name}','{$address}','{$phone_number}','{$password}','patient',1)";
         mysqli_query($connection,$query);
     }
 
@@ -53,9 +54,9 @@ class reg_user{
     // user login
     public static function loging($email,$password,$connection)
     {
-        $query="SELECT type,email,first_name,last_name,address FROM  patient WHERE email='$email' AND password='$password' 
-        UNION SELECT type,email,first_name,last_name,address FROM  doctor WHERE email='$email' AND password='$password'
-        UNION SELECT type,email,first_name,last_name,address FROM admin  WHERE email='$email' AND password='$password'  
+        $query="SELECT type,email,first_name,last_name,address FROM  patient WHERE email='$email' AND password='$password' AND user_accepted=1
+        UNION SELECT type,email,first_name,last_name,address FROM  doctor WHERE email='$email' AND password='$password' AND user_accepted=1
+        UNION SELECT type,email,first_name,last_name,address FROM admin  WHERE email='$email' AND password='$password'  AND user_accepted=1
         LIMIT 1 ";
         $result_set=mysqli_query($connection,$query);
         return  $result_set;

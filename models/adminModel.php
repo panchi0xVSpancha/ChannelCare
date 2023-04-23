@@ -7,6 +7,14 @@ class adminModel{
         $result=mysqli_query($connection,$query);
         return $result;
     }
+
+    //get active all users
+    public static function doctorDetails($level,$id,$connection){
+        $query="SELECT * FROM $level WHERE user_accepted=$id";
+        $result=mysqli_query($connection,$query);
+        return $result;
+    }
+
     // get all user details count
     public static function userDetailsAll($connection){
         $query="SELECT email,reg_date FROM student
@@ -18,16 +26,64 @@ class adminModel{
         return $result;
     }
 
-    public static function searchStudent($id,$word,$connection){
-    $query="SELECT * FROM student WHERE email LIKE '{$word}' 
+    public static function searchPatient($id,$word,$accept,$connection){
+    $query="SELECT * FROM patient WHERE user_accepted = $accept AND ( email LIKE '{$word}' 
             OR   first_name LIKE '{$word}'  
             OR  last_name LIKE '{$word}'
             OR   address LIKE '{$word}'
-            OR   NIC  LIKE '{$word}'
-            OR   Reg_id LIKE $id";
+            OR   phone_number  LIKE '{$word}'
+            OR   patient_id LIKE $id)
+            ORDER BY patient_id ASC";
         $result=mysqli_query($connection,$query);
         return $result;
     }
+
+    public static function searchDoctor($id,$word,$accept,$connection){
+        $query="SELECT * FROM doctor WHERE user_accepted = $accept AND ( email LIKE '{$word}' 
+                OR   first_name LIKE '{$word}'  
+                OR  last_name LIKE '{$word}'
+                OR   address LIKE '{$word}'
+                OR   phone_number  LIKE '{$word}'
+                OR   doctor_id LIKE $id)
+                ORDER BY doctor_id ASC";
+            $result=mysqli_query($connection,$query);
+            return $result;
+        }
+
+   ////admin accept the doctor registration request (become user_accepted=1)
+   public static function confirmDoctorRegistration($request_id,$connection)
+   {
+       $query="UPDATE 
+       doctor 
+       SET  
+       user_accepted=1 
+       WHERE 
+       doctor_id='{$request_id}'";
+
+       $result=mysqli_query($connection,$query);
+       return $result;
+   }
+
+      ////admin reject the doctor registration request (become user_accepted=1)
+      public static function rejectDoctorRegistration($request_id,$connection)
+      {
+          $query="UPDATE 
+          doctor 
+          SET  
+          user_accepted=2 
+          WHERE 
+          doctor_id='{$request_id}'";
+   
+          $result=mysqli_query($connection,$query);
+          return $result;
+      }
+
+
+
+
+
+
+
     public static function searchBoarder($id,$word,$connection){
         $query="SELECT * FROM boarder WHERE email LIKE '{$word}' 
                 OR   first_name LIKE '{$word}'
@@ -123,6 +179,22 @@ class adminModel{
         $result=mysqli_query($connection,$query);
         return $result;
     }
+
+        // active doctor profile
+        public static function activeDoctorProfile($level,$email,$connection)
+        {
+        $query="UPDATE $level SET user_accepted=1 WHERE email='{$email}'";
+            $result=mysqli_query($connection,$query);
+            return $result;
+        }
+
+        // deny doctor profile
+        public static function denyDoctorProfile($level,$email,$connection)
+        {
+        $query="UPDATE $level SET user_accepted=2 WHERE email='{$email}'";
+            $result=mysqli_query($connection,$query);
+            return $result;
+        }
 
     // unblock user
     public static function unblockUser($level,$email,$connection)
