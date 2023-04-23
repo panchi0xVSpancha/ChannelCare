@@ -20,14 +20,13 @@
 <div class="big-box">
 			<!-- login left side box -->
 			<div class="discrip">
-				<div style="width: 650px;height:480px;"><img  style="width:650px;height:480px;" src="../resource/img/boardingPost.png" ></div>
-				<div class="welcome">
-					<h1>Welcome To Bodima</h1>
-				</div>
+				<div style="width: 650px;height:480px;"><img  style="width:650px;height:480px;" src="../resource/img/Login.jpg" ></div>
+				<!-- <div class="welcome">
+					<h1>Welcome To </br>ChannelCare</h1>
+				</div> -->
 			</div>
 			<!-- login right side box -->
 			<div class="login">
-			<div class="profile"><img src="../resource/img/logo1.png" ></div>
 			<h1 style="text-align:center">User Login!</h1>
 				<form action="../controller/logingController.php" method="post">
 					<?php if(isset(($_GET['errors'])))

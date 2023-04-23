@@ -8,14 +8,12 @@
 </head>
 
 <body>
-	<div class="background-img1"><img src="../resource/img/bording_owner.png" alt=""></div>
-	<div class="logo"><img src="../resource/img/logo1.png" alt=""></div>
+	<div class="background-img1"><img src="../resource/img/doctor.jpg" alt=""></div>
 	<div class="container">
 		<div class="para">
 			<h1><b>U</b>ser <b>R</b>egistration</h1>
-			<h2 style="text-align: center">Boarding Owner</h2>
-			<p style="text-align: center"> Hey there! Welcome to bodima platform. You are in the <b>most famous boarding
-					Advertising and renting platform</b>. Congratulations for your journey with us! </p>
+			<h2 style="text-align: center">Doctor</h2>
+			<p style="text-align: center">Hello, we would like to invite you to join our e-channeling system</br> as a registered doctor. By signing up, you'll gain access</br> to a wide range of patients seeking medical care in your specialization area.</br></br> To register, simply visit our website and enter your details,</br> including your specialization area. </br>This will allow us to match you with patients seeking care in your area of expertise.</p>
 		</div>
 		<div class="register">
 			<form id="doctorReg" method="post">
