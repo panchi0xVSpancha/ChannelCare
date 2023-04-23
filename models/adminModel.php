@@ -50,6 +50,40 @@ class adminModel{
             return $result;
         }
 
+   ////admin accept the doctor registration request (become user_accepted=1)
+   public static function confirmDoctorRegistration($request_id,$connection)
+   {
+       $query="UPDATE 
+       doctor 
+       SET  
+       user_accepted=1 
+       WHERE 
+       doctor_id='{$request_id}'";
+
+       $result=mysqli_query($connection,$query);
+       return $result;
+   }
+
+      ////admin reject the doctor registration request (become user_accepted=1)
+      public static function rejectDoctorRegistration($request_id,$connection)
+      {
+          $query="UPDATE 
+          doctor 
+          SET  
+          user_accepted=2 
+          WHERE 
+          doctor_id='{$request_id}'";
+   
+          $result=mysqli_query($connection,$query);
+          return $result;
+      }
+
+
+
+
+
+
+
     public static function searchBoarder($id,$word,$connection){
         $query="SELECT * FROM boarder WHERE email LIKE '{$word}' 
                 OR   first_name LIKE '{$word}'

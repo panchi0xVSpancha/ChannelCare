@@ -37,8 +37,8 @@ session_start(); ?>
                         <th>Last Name</td>
                         <th>Email</td>
                         <th>Phone Number</th>
-                        <!-- <th>Is_accepted</th>
-                        <th>Block user</th> -->
+                        <th>Address</th>
+                       
                     </tr>
 
                     <!-- user search the word  -->
@@ -58,6 +58,7 @@ session_start(); ?>
                               <td><?php echo $row['last_name']; ?></td>
                               <td><?php echo $row['email']; ?></td>
                               <td><?php echo $row['phone_number']; ?></td>
+                              <td><?php echo $row['address']; ?></td>
                           </tr>
                          
                           <?php
@@ -75,6 +76,7 @@ session_start(); ?>
                          <td><?php echo $row['last_name']; ?></td>
                          <td><?php echo $row['email']; ?></td>
                          <td><?php echo $row['phone_number']; ?></td>
+                         <td><?php echo $row['address']; ?></td>
                   
                      </tr>
                      

@@ -27,26 +27,27 @@
                         <a href="adminFoodsupplier.php">Food Suppliers <i class="fa fa-caret-right"></i></a> -->
                     </div>
                 </div >
-              
-                <div class="element2" id="food">
+                <div class="element3" id="boarding">
+                    <li><div><i class="fas fa-laptop-house"></i> Reg Requests</div> <i class="fa fa-chevron-down"></i></li>
+                    <div class="item">
+                        <a href="adminDoctorPendingRequest.php">Pending Requests <i class="fa fa-caret-right"></i></a>
+                        <a href="adminDoctorDenyRequests.php">Deny Requests <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="element2" id="food">
                     <li><div><i class="fa fa-hamburger"></i> Food Posts</div> <i class="fa fa-chevron-down"></i></li>
                     <div class="item">
                         <a href="adminFoodPost.php">Posts <i class="fa fa-caret-right"></i></a>
                     </div>
                 </div>
-                <div class="element3" id="boarding">
-                    <li><div><i class="fas fa-laptop-house"></i> Reg Requests</div> <i class="fa fa-chevron-down"></i></li>
-                    <div class="item">
-                        <a href="adminRegRequest.php">Pending Requests <i class="fa fa-caret-right"></i></a>
-                        <a href="adminRegRequest.php">Deny Requests <i class="fa fa-caret-right"></i></a>
-                    </div>
-                </div>
+
+               
                 <div class="element4" id="report">
                     <li><div><i class="fas fa-file-pdf"></i> Reports</div> <i class="fa fa-chevron-down"></i></li>
                     <div class="item">
                         <a href="adminReports.php">Data reports <i class="fa fa-caret-right"></i></a>
                     </div>
-                </div>
+                </div> -->
                 <a href="../index.php"><li>Web Site <i class="fa fa-chevron-right"></i></li></a>
                 <a href="../controller/logoutController.php" id="complaint"><li><div>Log Out</div> <i class="fa fa-angle-double-right"></i></li></a>
                
