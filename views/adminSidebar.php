@@ -21,10 +21,10 @@
                 <div class="element1" id="user">
                     <li><div><i class="fa fa-user-friends"></i> Users</div> <i class="fa fa-chevron-down"></i></li>
                     <div class="item">
-                        <a href="adminStudent.php">Students <i class="fa fa-caret-right"></i></a>
-                        <a href="adminBorder.php">Boarders <i class="fa fa-caret-right"></i></a>
-                        <a href="adminboardingOwner.php">Boarding Owners <i class="fa fa-caret-right"></i></a>
-                        <a href="adminFoodsupplier.php">Food Suppliers <i class="fa fa-caret-right"></i></a>
+                        <a href="adminPatient.php">Patients <i class="fa fa-caret-right"></i></a>
+                        <a href="adminDoctor.php">Doctors <i class="fa fa-caret-right"></i></a>
+                        <!-- <a href="adminboardingOwner.php">Boarding Owners <i class="fa fa-caret-right"></i></a>
+                        <a href="adminFoodsupplier.php">Food Suppliers <i class="fa fa-caret-right"></i></a> -->
                     </div>
                 </div >
               
@@ -35,9 +35,10 @@
                     </div>
                 </div>
                 <div class="element3" id="boarding">
-                    <li><div><i class="fas fa-laptop-house"></i> Boarding Posts</div> <i class="fa fa-chevron-down"></i></li>
+                    <li><div><i class="fas fa-laptop-house"></i> Reg Requests</div> <i class="fa fa-chevron-down"></i></li>
                     <div class="item">
-                        <a href="adminBoardingPost.php">Posts <i class="fa fa-caret-right"></i></a>
+                        <a href="adminRegRequest.php">Pending Requests <i class="fa fa-caret-right"></i></a>
+                        <a href="adminRegRequest.php">Deny Requests <i class="fa fa-caret-right"></i></a>
                     </div>
                 </div>
                 <div class="element4" id="report">

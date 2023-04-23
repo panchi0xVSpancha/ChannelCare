@@ -24,7 +24,7 @@ if(isset($_GET['admin']))
 if(isset($_POST['block']))
 {
     $email=$_POST['email'];
-    $level=$_POST['level'];
+    $type=$_POST['type'];
     $complaint=array();
     $complaint['con1']="";
     $complaint['con2']="";
@@ -50,27 +50,27 @@ if(isset($_POST['block']))
     if(isset($_POST['condition6'])){
         $complaint['con6']=$_POST['condition6'];
     }
-    print_r($level);
+    print_r($type);
 
-    $block=adminModel::blockUser($level,$email,$connection);
+    $block=adminModel::blockUser($type,$email,$connection);
     // blockMail($complaint,$email);
-    if($level=='student'){header('Location:../views/adminStudent.php');}
-    if($level=='boarder'){header('Location:../views/adminBorder.php');}
-    if($level=='boardings_owner'){header('Location:../views/adminBoardingOwner.php');}
-    if($level=='food_supplier'){header('Location:../views/adminFoodSupplier.php');} 
+    if($type=='student'){header('Location:../views/adminStudent.php');}
+    if($type=='boarder'){header('Location:../views/adminBorder.php');}
+    if($type=='boardings_owner'){header('Location:../views/adminBoardingOwner.php');}
+    if($type=='food_supplier'){header('Location:../views/adminFoodSupplier.php');} 
 }
 
 //  unblock user
 if(isset($_POST['unblock']))
 {
     $email=$_POST['email'];
-    $level=$_POST['level'];
-    $block=adminModel::unblockUser($level,$email,$connection);
+    $type=$_POST['type'];
+    $block=adminModel::unblockUser($type,$email,$connection);
     // blockMail($complaint,$email);
-    if($level=='student'){header('Location:../views/adminStudent.php');}
-    if($level=='boarder'){header('Location:../views/adminBorder.php');}
-    if($level=='boardings_owner'){header('Location:../views/adminBoardingOwner.php');}
-    if($level=='food_supplier'){header('Location:../views/adminFoodSupplier.php');} 
+    if($type=='student'){header('Location:../views/adminStudent.php');}
+    if($type=='boarder'){header('Location:../views/adminBorder.php');}
+    if($type=='boardings_owner'){header('Location:../views/adminBoardingOwner.php');}
+    if($type=='food_supplier'){header('Location:../views/adminFoodSupplier.php');} 
 }
 
 
@@ -397,9 +397,9 @@ if(isset($_POST['getAdmin'])){
 }
 
 // admin student page details
-function studentDetails($connection){
+function patientDetails($connection,$id){
     $data=array();
-    $result=adminModel::userDetails('student',$connection);
+    $result=adminModel::doctorDetails('patient',$id,$connection);
     while($row=mysqli_fetch_assoc($result)){   
         $data[]=$row;
     }
@@ -408,9 +408,9 @@ function studentDetails($connection){
 }
 
 // admin student page search result
-function studentSearchDetails($id,$word,$connection){
+function patientSearchDetails($id,$word,$accept,$connection){
     $data=array();
-    $result=adminModel::searchStudent($id,$word,$connection);
+    $result=adminModel::searchPatient($id,$word,$accept,$connection);
     while($row=mysqli_fetch_assoc($result)){   
         $data[]=$row;
     }
@@ -419,9 +419,9 @@ function studentSearchDetails($id,$word,$connection){
 }
 
 // admin border page details
-function borderDetails($connection){
+function doctorDetails($connection,$id){
     $data=array();
-    $result=adminModel::userDetails('boarder',$connection);
+    $result=adminModel::doctorDetails('doctor',$id,$connection);
     while($row=mysqli_fetch_assoc($result)){   
         $data[]=$row;
     }
@@ -430,9 +430,9 @@ function borderDetails($connection){
 }
 
 // admin border page search result
-function borderSearchDetails($id,$word,$connection){
+function doctorSearchDetails($id,$word,$accept,$connection){
     $data=array();
-    $result=adminModel::searchBoarder($id,$word,$connection);
+    $result=adminModel::searchDoctor($id,$word,$accept,$connection);
     while($row=mysqli_fetch_assoc($result)){   
         $data[]=$row;
     }

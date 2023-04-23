@@ -3,9 +3,13 @@
       include ('adminChart.php');
 ?>
 <?php 
-$userCount=$_GET['student']+$_GET['boarding_owner']+$_GET['boarder']+$_GET['food_supplier'];
-$bConut=$_GET['boarding_count'];
-$fConut=$_GET['food_count'];
+$userCount=20;
+$bConut=20;
+$fConut=10;
+// $userCount=$_GET['student']+$_GET['boarding_owner']+$_GET['boarder']+$_GET['food_supplier'];
+// $bConut=$_GET['boarding_count'];
+// $fConut=$_GET['food_count'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
